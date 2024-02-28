@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas P´Hacer .app</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <form action="">
+                <div>
+                    <p>Nueva tarea</p>
+                    <label for="nuevaTarea"></label>
+                    <input type="text" name="nuevaTarea" id="nuevaTarea" placeholder="Nombre de la nueva tarea...">
+                </div>
+                <div>
+                    <p>Prioridad</p>
+                    <select id="prioridad">
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="urgente">URGENTE</option>
+                    </select>
+                </div>
+                <input type="submit" value="Crear">
+            </form>
+            <main>
+                <div>
+                    <div>
+                        <p>Filto por nombre</p>
+                        <label for="filtroTarea"></label>
+                        <input type="text" name="filtroTarea" id="filtroTarea" placeholder="Título...">
+                    </div>
+                    <div>
+                        <p>Prioridad</p>
+                        <select id="filtroPrioridad">
+                            <option value="filtroDiaria">Diaria</option>
+                            <option value="filtroMensual">Mensual</option>
+                            <option value="filtroUrgente">URGENTE</option>
+                        </select>
+                    </div>
+                </div>
+                <section id="tareas">
+                    <article>
+                        <p>#1</p>
+                        <p class="nombreTarea">Nombre tarea 1</p><input type="submit" value="Completada">
+                    </article>
+                    <article>
+                        <p>#2</p>
+                        <p class="nombreTarea">Nombre tarea 2</p><input type="submit" value="Completada">
+                    </article>
+                    <article>
+                        <p>#3</p>
+                        <p class="nombreTarea">Nombre tarea 3</p><input type="submit" value="Completada">
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <p>Pie de página de la app </p>
+            </footer>
+        </header>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
