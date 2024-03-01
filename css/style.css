@@ -5,6 +5,14 @@
     transition: 0.25s;
 }
 
+.rounded {
+    border: 2px solid sandybrown;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/*    BODY:     */
+
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
@@ -14,25 +22,38 @@ body {
 
 .wrapper {
     margin-top: 50px;
-    width: 90vw;
-    min-width: 650px;
-    max-width: 1004;
+    width: 80vw;
+    min-width: 655px;
+    max-width: 1004px;
     background-color: antiquewhite;
+    border: 4px solid orange;
+    border-radius: 8px;
 }
 
-.rounded {
-    border: 2px solid sandybrown;
-    border-radius: 5px;
-    font-size: 18px;
+/*    HEADER    */
+
+/*    CABECERA    */
+
+.titulo {
+    display: flex;
+    height: 5em;
+    background-color: rgb(255, 187, 105);
+    border-bottom: 4px solid orange;
 }
 
-/* Header: crear nueva tarea */
+h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin: auto 40px;
+}
+
+/* Crear nueva tarea */
 
 .flex1 {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
     background-color: rgb(255, 214, 164);
+    border-bottom: 2px solid orange;
 
     & * {
         margin: 0;
@@ -73,8 +94,15 @@ body {
     }
 }
 
+/*    FOOTER    */
 
-/* main: filtros de búsqueda */
+footer {
+    padding: 15px 10px;
+    background-color: rgb(255, 214, 164);
+    border-top: 2px solid orange;
+}
+
+/* Filtros de búsqueda */
 
 .flex2 {
     display: flex;
@@ -95,7 +123,7 @@ body {
 }
 
 
-/* main: tareas */
+/* Lista de tareas */
 
 .flex3 {
     display: flex;
@@ -137,6 +165,14 @@ body {
     }
 }
 
+.ordinal {
+    font-weight: 700;
+    background-color: rgba(128, 128, 128, 0.2);
+    border: none;
+    border-radius: 0;
+    text-align: center;
+}
+
 .urgente {
     background-color: rgb(255, 128, 128);
     border-color: red;
@@ -162,17 +198,4 @@ body {
         background-color: rgb(64, 64, 64);
         color: rgb(239, 239, 239);
     }
-}
-
-.ordinal {
-    font-weight: 700;
-    background-color: rgba(128, 128, 128, 0.2);
-    border: none;
-    border-radius: 0;
-    text-align: center;
-}
-
-footer {
-    padding: 10px;
-    background-color: rgb(255, 214, 164);
 }
