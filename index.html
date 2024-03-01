@@ -14,15 +14,14 @@
             <div class="titulo">
                 <h1>app P'acer</h1>
             </div>
-            <form class="flex1">
+            <form id="formNuevaTarea" class="flex1">
                 <div>
                     <label for="nuevaTarea">Nueva tarea</label>
-                    <input class="rounded" type="text" name="nuevaTarea" id="nuevaTarea"
-                        placeholder="Nombre de la nueva tarea...">
+                    <input class="rounded" type="text" name="nuevaTarea" placeholder="Nombre de la nueva tarea...">
                 </div>
                 <div>
                     <label for="prioridad">Prioridad</label>
-                    <select class="rounded" id="prioridad">
+                    <select class="rounded" name="prioridad">
                         <option value="urgente">URGENTE</option>
                         <option value="diaria">Diaria</option>
                         <option value="mensual">Mensual</option>
@@ -73,6 +72,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
