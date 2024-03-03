@@ -10,6 +10,35 @@ const domTareas = document.querySelector('#tareas');
         <button class="rounded btnQuitar" onclick="terminarTarea()" value="Completada">Completada</button>
     </article> */
 
+function pintarTarea(tarea, domElement) {
+    const newArticle = document.createElement('article');
+    newArticle.classList.add('flex3', tarea.prioridad);
+    const p1 = document.createElement('p');
+    p1.classList.add('ordinal');
+    p1.textContent = ('#' + tarea.id);
+    const p2 = document.createElement('p');
+    p2.id = `${tarea.titulo}`;
+    p2.textContent = tarea.titulo;
+    const button = document.createElement('button');
+    button.classList.add('rounded', 'btnQuitar');
+    button.onclick = `terminarTarea(${tarea.id})`;
+    button.value = 'Completada';
+    button.textContent = 'Completada';
+
+    newArticle.append(p1, p2, button);
+
+    domElement.appendChild(newArticle);
+}
+
+function pintarTareas(lista, dom) {
+
+    dom.innerHTML = [];
+    if (lista === "") {
+        dom.innerHTML = `<h2>No hay tareas que mostrar</h2>`
+    } else {
+        lista.forEach(tarea => pintarTarea(tarea, dom));
+    }
+}
 
 function crearTarea(nuevaTarea, prioridad) {
     // esta tarea ya existe
@@ -51,3 +80,4 @@ function terminarTarea(event) {
     console.log(event);
 }
 
+pintarTareas(listaTareas, domTareas);
