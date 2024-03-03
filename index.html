@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareas P'Hacer .app</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/data.js"></script>
 </head>
 
 <body>
@@ -34,36 +35,36 @@
         </header>
         <main>
             <div class="flex2">
+                <form>
+                    <label for="filtroNombre">Filtrar por nombre</label>
+                    <input id="filtroNombre" class="rounded" type="text" name="filtroNombre" placeholder="Título...">
+                </form>
                 <div>
-                    <label for="filtroTarea">Filto por nombre</label>
-                    <input class="rounded" type="text" name="filtroTarea" id="filtroTarea" placeholder="Título...">
-                </div>
-                <div>
-                    <p>Prioridad</p>
+                    <p>Filtrar por prioridad</p>
                     <select id="filtroPrioridad" class="rounded">
-                        <option value="filtroDiaria">Diaria</option>
-                        <option value="filtroMensual">Mensual</option>
-                        <option value="filtroUrgente">URGENTE</option>
+                        <option value="">Selecciona:</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="urgente">URGENTE</option>
                     </select>
                 </div>
             </div>
             <section id="tareas">
-                <article class="flex3 mensual">
+                <!-- <article class="flex3 urgente">
                     <p class="ordinal">#1</p>
                     <p id="nombreTarea">Nombre tarea 1</p>
-                    <input class="rounded btnQuitar" type="submit" value="Completada">
+                    <button class="rounded btnQuitar" onclick="terminarTarea()" value="Completada">Completada</button>
                 </article>
                 <article class="flex3 diaria">
-                    <p class="ordinal">#1</p>
+                    <p class="ordinal">#2</p>
                     <p id="nombreTarea">Nombre tarea 1</p>
-                    <input class="rounded btnQuitar" type="submit" value="Completada">
+                    <button class="rounded btnQuitar" onclick="terminarTarea()" value="Completada">Completada</button>
+                </article> -->
+                <article class="flex3 mensual">
+                    <p class="ordinal">#3</p>
+                    <p id="nombreTarea">Nombre tarea 1</p>
+                    <button class="rounded btnQuitar" onclick="terminarTarea()" value="Completada">Completada</button>
                 </article>
-                <article>
-                    <article class="flex3 urgente">
-                        <p class="ordinal">#1</p>
-                        <p id="nombreTarea">Nombre tarea 1</p>
-                        <input class="rounded btnQuitar" type="submit" value="Completada">
-                    </article>
             </section>
         </main>
         <footer>
