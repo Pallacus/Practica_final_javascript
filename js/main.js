@@ -44,14 +44,15 @@ function crearTarea(lista, nuevoTitulo, prioridad) {
     lista.forEach(tarea => {
         if (tarea.titulo === nuevoTitulo) {
             duplicada = true;
-
         }
     });
     if (duplicada) {
         alert('Esta tarea ya existe.');
     } else {
+        let ultimoId = 0
+        lista.forEach(tarea => ultimoId = (tarea.id > ultimoId? tarea.id : ultimoId));
         const nuevaTarea = {};
-        nuevaTarea.id = lista.length;
+        nuevaTarea.id = ultimoId + 1;
         nuevaTarea.titulo = nuevoTitulo;
         nuevaTarea.prioridad = prioridad;
         lista.push(nuevaTarea);
