@@ -31,7 +31,7 @@ function pintarTarea(tarea, domElement) {
 function pintarTareas(lista, dom) {
 
     dom.innerHTML = [];
-    if (lista === "") {
+    if (lista.length === 0) {
         dom.innerHTML = `<h2>No hay tareas que mostrar</h2>`
     } else {
         lista.forEach(tarea => pintarTarea(tarea, dom));
@@ -128,6 +128,8 @@ function terminarTarea(killId) {
     let objetivo = listaTareas.findIndex(tarea => tarea.id === killId);
     listaTareas.splice(objetivo, 1)
     pintarTareas(listaTareas, domTareas);
+
+    alert('Tarea eliminada.');
 }
 
 pintarTareas(listaTareas, domTareas);
