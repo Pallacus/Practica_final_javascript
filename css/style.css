@@ -108,6 +108,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
+    background-color: rgb(250, 225, 194);
 
     & * {
         margin: 0;
@@ -198,4 +199,9 @@ footer {
         background-color: rgb(64, 64, 64);
         color: rgb(239, 239, 239);
     }
+}
+
+h2 {
+    margin: 0.5em;
+    text-align: center;
 }
