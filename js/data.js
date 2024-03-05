@@ -1,16 +1,16 @@
 listaTareas = [
     {
-        'id': 0,
+        'id': 1,
         'titulo': `Terminar la app P'acer`,
         'prioridad': 'urgente'
     },
     {
-        'id': 1,
+        'id': 2,
         'titulo': `Dormir casi 8 horas`,
         'prioridad': 'diaria'
     },
     {
-        'id': 2,
+        'id': 3,
         'titulo': `Hacer la compra`,
         'prioridad': 'mensual'
     }
